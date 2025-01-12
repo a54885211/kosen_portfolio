@@ -1,0 +1,279 @@
+/* Webフォント追加 */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+header {
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    color: #fff;
+    padding: 1.5rem 2rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background 0.3s ease;
+}
+
+header:hover {
+    background: linear-gradient(135deg, #5a78d4, #9160c8);
+}
+
+header h1 {
+    font-size: 2.5rem; /* タイトルのサイズを少し大きく */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* 視認性を上げるための文字の影 */
+    color: #ffffff; /* タイトルを目立たせるため黄色に変更 */
+}
+
+header nav a {
+    color: #fff;
+    margin: 0 1rem;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: #ffdd57;
+}
+
+.content-section {
+    padding: 2rem;
+    margin: 2rem auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+h1, h2 {
+    color: #4e4e4e;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #444;
+    color: #fff;
+    font-size: 0.9rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer a {
+    color: #ffdd57;
+    text-decoration: none;
+}
+
+ul {
+    margin: 0; /* 外側の余白をゼロに */
+    padding-left: 20px; /* 箇条書きマークの位置を調整 */
+    list-style-type: disc; /* 黒丸（デフォルトの箇条書きマーク）を表示 */
+}
+
+ul ul {
+    margin: 0;
+    padding-left: 40px; /* 子リストのインデントを調整 */
+    list-style-type: circle; /* 子リストの箇条書きマークを白丸に変更（任意） */
+}
+
+li {
+    margin: 0; /* li要素間の余白をゼロに */
+    padding: 0; /* li要素内の余白をゼロに */
+}
+
+ol {
+    padding-left: 1.5rem;
+    margin-top: 1rem;
+    font-size: 1rem;
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 1rem;
+    }
+
+    .content-section {
+        margin: 1rem;
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}
+.buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    background-color: #6e8efb;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.button:hover {
+    background-color: #5a78d4;
+    transform: scale(1.05);
+}
+
+.button:active {
+    background-color: #4a65b3;
+    transform: scale(1);
+}
+
+.content-section {
+    padding: 2rem;
+    margin: 2rem auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+}
+
+header nav a {
+    color: #fff;
+    margin: 0 1rem;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: #ffdd57;
+}
+
+header nav a.active {
+    color: #ffdd57; /* 現在のページのリンクを黄色にする */
+    border-bottom: 2px solid #ffdd57; /* 下線を追加してさらに強調 */
+    padding-bottom: 2px;
+}
+
+/* 画像の大きさ */
+/* コンテナの設定 */
+.image-container {
+    display: flex; /* 横並び */
+    flex-wrap: wrap; /* 必要に応じて折り返し */
+    gap: 16px; /* 画像間のスペース */
+    justify-content: center; /* 中央揃え */
+    padding: 16px;
+}
+
+/* 画像のサイズ設定 */
+.image-container img {
+    width: 100%; /* 親要素に対して100% */
+    max-width: 300px; /* 最大幅を制限 */
+    height: auto; /* アスペクト比を維持 */
+    border-radius: 8px; /* 角丸 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 影 */
+    transition: transform 0.3s ease;
+}
+
+/* ホバー時の拡大 */
+.image-container img:hover {
+    transform: scale(1.05);
+}
+
+/* レスポンシブ対応（画面サイズに応じて調整） */
+@media (max-width: 768px) {
+    .image-container img {
+        max-width: 200px; /* タブレットや小さいデバイスでサイズを調整 */
+    }
+}
+
+@media (max-width: 480px) {
+    .image-container img {
+        max-width: 150px; /* スマートフォン用にさらに小さく */
+    }
+}
+
+/* DOBOT用影なしCSS */
+/* コンテナの設定 */
+.simple-image-container {
+    display: flex; /* 横並び */
+    flex-wrap: wrap; /* 必要に応じて折り返し */
+    gap: 16px; /* 画像間のスペース */
+    justify-content: center; /* 中央揃え */
+    padding: 16px;
+}
+
+/* 画像のサイズ設定 */
+.simple-image-container img {
+    width: 100%; /* 親要素に対して100% */
+    max-width: 300px; /* 最大幅を制限 */
+    height: auto; /* アスペクト比を維持 */
+    border-radius: 8px; /* 角丸 */
+    transition: transform 0.3s ease;
+}
+
+
+/* レスポンシブ対応（画面サイズに応じて調整） */
+@media (max-width: 768px) {
+    .simple-image-container img {
+        max-width: 200px; /* タブレットや小さいデバイスでサイズを調整 */
+    }
+}
+
+@media (max-width: 480px) {
+    .simple-image-container img {
+        max-width: 150px; /* スマートフォン用にさらに小さく */
+    }
+}
+
+/* くま寿司　 テキスト*/
+/* ラベルコンテナの中央揃えと余白調整 */
+.label-container {
+    display: flex; /* フレックスボックスを使用 */
+    justify-content: center; /* 横方向中央揃え */
+    align-items: center; /* 縦方向中央揃え */
+    margin: 2rem 0; /* 上下の余白 */
+}
+
+/* ラベルのスタイル */
+.label {
+    padding: 20px 40px; /* ラベル内の上下左右の余白を増やす */
+    background-color: #5F2F2F; /* 背景色 */
+    color: white; /* 文字色 */
+    border-radius: 20px; /* 角丸 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 影を追加 */
+    text-align: center; /* テキストを中央揃え */
+    max-width: 400px; /* ラベルの最大幅を指定 */
+}
+
+/* h1のスタイル調整 */
+.label h1 {
+    color: white; /* 文字色 */
+    margin: 0; /* h1のデフォルトの余白をリセット */
+    font-size: 3rem; /* 文字サイズを大きく設定 */
+    font-weight: bold; /* 太字 */
+    line-height: 1.5; /* 行間を広めに */
+    font-family: "Times New Roman", "ヒラギノ明朝 Pro W3", serif; /* 明朝体を指定 */
+}
